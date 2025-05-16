@@ -3,9 +3,9 @@ Fiche pratique : Intégration du minifyPHP dans CodeKit
 
 — Prérequis
 
-	1.	macOS avec CodeKit installé
+	1.	MacOS avec CodeKit installé
 	2.	Fichier source du minifier (minifier.c) prêt
-	3.	 Accès au Terminal pour compiler et installer le binaire
+	3.	Accès au Terminal pour compiler et installer le binaire
 
 
 — Compilation du minifier en binaire CLI
@@ -16,7 +16,7 @@ Fiche pratique : Intégration du minifyPHP dans CodeKit
 	2.	Compiler avec optimisation :
 		gcc -O3 -std=c11 -o phpminifier minifier.c
 	
-	3.	 Installer le binaire dans ton PATH :
+	3.	Installer le binaire dans ton PATH :
 		sudo mv phpminifier /usr/local/bin/
 		chmod +x /usr/local/bin/phpminifier
 
@@ -24,18 +24,16 @@ Fiche pratique : Intégration du minifyPHP dans CodeKit
 — Configuration dans CodeKit
 
 
-	1.	Ouvrir CodeKit et sélectionner ton projet.
-	2.	Aller dans l’onglet Command Line Scripts (ou équivalent).
-	3.	Ajouter un nouveau script :
+	1.	Ouvrir CodeKit et sélectionner le projet
 	
+	2.	Aller dans l’onglet Command Line Scripts (ou équivalent)
+	
+	3.	Ajouter un nouveau script :
 		- Trigger : After Save (ou On File Save)
-   	
-   		- Files : Pattern `*.php`
-  
-   		- Command :
-   		phpminifier "$INPUT_PATH" > "/chemin/vers/minified/(basename $INPUT_PATH)"
+  		- Files : Pattern `*.php` 
+  		- Command : phpminifier "$INPUT_PATH" > "/chemin/vers/minified/(basename $INPUT_PATH)"
 
-	4. Valider et sauvegarder la configuration
+	4.	Valider et sauvegarder la configuration
 
 
 
@@ -65,14 +63,7 @@ Fiche pratique : Intégration du minifyPHP dans CodeKit
 
 
 
-— Astuces avancées
+— Astuce avancée
 
 	1.	Contourner CodeKit :
 		Utiliser fswatch ou entr pour watcher les .php et exécuter le minifier.
-	
-	2.	Batch : 
-		Ajouter une cible make dans un Makefile pour compiler et minifier d’un coup.
-	
-	3.	Extensions :
-		Adapter la commande pour d’autres types de fichiers (JS, CSS) si tu crées plusieurs binaires.
-	
