@@ -1,10 +1,11 @@
-#MinifyPHP — en cours de dev.
-Fiche pratique : Intégration du minifier C dans CodeKit
+Fiche pratique : Intégration du minifyPHP dans CodeKit
+(#MinifyPHP — en cours de dev)
 
 — Prérequis
-	•	macOS avec CodeKit installé
-	•	Fichier source du minifier (minifier.c) prêt
-	•	Accès au Terminal pour compiler et installer le binaire
+
+	1.	macOS avec CodeKit installé
+	2.	Fichier source du minifier (minifier.c) prêt
+	3.	 Accès au Terminal pour compiler et installer le binaire
 
 
 — Compilation du minifier en binaire CLI
@@ -74,5 +75,4 @@ Fiche pratique : Intégration du minifier C dans CodeKit
 	
 	3.	Extensions :
 		Adapter la commande pour d’autres types de fichiers (JS, CSS) si tu crées plusieurs binaires.
-
-⸻
+	
