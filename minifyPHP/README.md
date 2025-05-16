@@ -1,5 +1,5 @@
+#MinifyPHP — en cours de dev.
 Fiche pratique : Intégration du minifier C dans CodeKit
-⸻
 
 — Prérequis
 	•	macOS avec CodeKit installé
